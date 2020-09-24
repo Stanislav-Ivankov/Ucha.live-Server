@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>h264-live-player web client demo</title>
+    <link href="./video-js.css" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+      }
+      video-js {
+        width: 100vw!important;
+        height: 100vh!important;
+      }
+    </style>
+  </head>
+  <body>
+    <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
+      <source src="/stream/index.m3u8" type="application/x-mpegURL">
+    </video-js>
+    <!-- test -->
+    <script src="./video.js"></script>
+    <script src="./videojs-http-streaming.js"></script>
+    
+    <script>
+      var player = videojs('my_video_1');
+    </script>
+  </body>
+</html>
